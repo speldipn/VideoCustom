@@ -1,0 +1,31 @@
+.Control {
+  width: 100%;
+  height: 46px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .Control__Progress {
+    width: 100%;
+    height: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    progress {
+      color: red;
+      font-size: 12px;
+      width: 100%;
+      height: 4px;
+      border: none;
+      border-radius: 9px;
+      vertical-align: middle;
+    }
+
+    progress::-moz-progress-bar {
+      background: red;
+    }
+
+    progress::-webkit-progress-value {
+      background: red;
+    }
+  }
+}
