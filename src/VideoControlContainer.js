@@ -69,12 +69,12 @@ class VideoControlContainer extends Component {
   onClickVolumeOn = () => {
     const { videoRef } = this.props;
     videoRef.muted = true;
-  }; // restore
+  };
 
   onClickVolumeOff = () => {
     const { videoRef } = this.props;
     videoRef.muted = true;
-  }; // mute
+  };
 
   onChangeVolumeProgress = event => {
     const { videoRef } = this.props;
