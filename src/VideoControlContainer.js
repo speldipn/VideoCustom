@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-// images
 import FullScreenExit from "./image/fullscreen-exit.svg";
 import Fullscreen from "./image/fullscreen.svg";
 import Pause from "./image/pause.svg";
@@ -66,7 +64,7 @@ class VideoControlContainer extends Component {
     videoRef.pause();
   };
 
-  onClickNext = () => {}; // not yet
+  onClickNext = () => {}; // TODO: skip to next video
 
   onClickVolumeOn = () => {
     const { videoRef } = this.props;
@@ -153,52 +151,63 @@ class VideoControlContainer extends Component {
           />
         </div>
 
-        <input type="image" src={Play} onClick={this.onClickPlay} alt="" />
-        <input type="image" src={Pause} onClick={this.onClickPause} alt="" />
-        <input type="image" src={Next} onClick={this.onClickNext} alt="" />
+        <input type="image" src={Play} onClick={this.onClickPlay} alt="Play" />
+        <input
+          type="image"
+          src={Pause}
+          onClick={this.onClickPause}
+          alt="Pause"
+        />
+        <input
+          type="image"
+          src={Next}
+          onClick={this.onClickNext}
+          alt="Skip to next"
+        />
         <input
           type="image"
           src={VolumeOn}
           onClick={this.onClickVolumeOn}
-          alt=""
+          alt="Volume"
         />
         <input
           type="image"
           src={VolumeOff}
           onClick={this.onClickVolumeOff}
-          alt=""
+          alt="Mute"
         />
         <input
           type="range"
           min="0"
           max="100"
           onChange={this.onChangeVolumeProgress}
-          alt=""
+          alt="Volume bar"
         />
+        {/* Floating video */}
         {/* <input type="image" src={Video} /> */}
         <input
           type="image"
           src={SubtitlesOn}
           onClick={this.onClickSubtitleOn}
-          alt=""
+          alt="Subtitle on"
         />
         <input
           type="image"
           src={SubtitlesOff}
           onClick={this.onClickSubtitleOff}
-          alt=""
+          alt="Subtitle off"
         />
         <input
           type="image"
           src={Fullscreen}
           onClick={this.onClickFullscreen}
-          alt=""
+          alt="Fullscreen"
         />
         <input
           type="image"
           src={FullScreenExit}
           onClick={this.onClickFullscreenExit}
-          alt=""
+          alt="Fullscreen exit"
         />
       </div>
     );
